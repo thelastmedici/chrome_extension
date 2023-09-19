@@ -36,8 +36,11 @@ const tabs = [
 ]
 
 tabBtn.addEventListener("click", function(){
-    //console.log(JSON.stringify(tabs))
-    console.log(tabs[0])
+    //console.log(JSON.stringify(tabs))  this actually works too //
+    //console.log(tabs[0].url)
+    myLeads.push(tabs[0].url)
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+    render(myLeads)
 
 })
 
